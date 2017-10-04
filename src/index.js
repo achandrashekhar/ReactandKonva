@@ -46,8 +46,8 @@ class Wedge extends React.Component {
       <Arc
         x={350}
         y={350}
-        innerRadius={110}
-        outerRadius={200}
+        innerRadius={this.props.innerRadius} //110
+        outerRadius={this.props.outerRadius} //200
         fill={this.state.color}
         shadowBlur={5}
         angle={this.props.angle}
@@ -63,11 +63,14 @@ class App extends React.Component {
       <Stage width={700} height={700}>
         <Layer>
           <MyRect />
-          <Wedge color={"orange"} angle = {60}/>
-          <Wedge color={"black"} angle = {90}/>
-          <Wedge color={"blue"} angle = {40}/>
-          <Wedge color={"red"} angle = {20}/>
-          <Wedge color={"pink"} angle = {10}/>
+          <Wedge color={"orange"} angle = {120} innerRadius={110} outerRadius={200}/>
+          <Wedge color={"red"} angle = {80} innerRadius={110} outerRadius={200}/>
+          <Wedge color={"blue"} angle = {40} innerRadius={110} outerRadius={200}/>
+            <Wedge color={"green"} angle = {40} innerRadius={110} outerRadius={115}/>
+          <Wedge color={"yellow"} angle = {30} innerRadius={110} outerRadius={115}/>
+          <Wedge color={"red"} angle = {20} innerRadius={110} outerRadius={115}/>
+          <Wedge color={"black"} angle = {10} innerRadius={110} outerRadius={115}/>
+          <Wedge color={"black"} angle = {360} innerRadius={200} outerRadius={220}/>
 
         </Layer>
       </Stage>
